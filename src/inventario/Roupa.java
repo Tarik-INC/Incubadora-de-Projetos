@@ -2,23 +2,32 @@ package inventario;
 
 import java.text.DecimalFormat;
 
-public class Roupa {
+abstract class Roupa {
 	
 	private static int quantEstoque; // quantidade em estoque
+	private int nroId;
 	public double preco;
 	public String tamanho;
 	public String cor;
 	public String material;
 	public String modelagem;
-	public boolean temEstampa;
+	private boolean temEstampa; // a informação e acesada indiretamente por metodo	
 	Marca marca;
 	
 	public static int getQuantEstoque() {
-		return quantEstoque;
+		return quantEstoque; 
 	}
 
 	public static void setQuantEstoque(int quantEstoque) {
 		Roupa.quantEstoque = quantEstoque;
+	}
+
+	public int getNroId() {
+		return nroId;
+	}
+
+	public void setNroId(int nroId) {
+		this.nroId = nroId;
 	}
 
 	public Roupa(double p, String nomeMarca, String tam, String cor, String mat, 
@@ -46,7 +55,7 @@ public class Roupa {
 		
 	}
 	
-	private String PossuiEstampa() {
+	public String PossuiEstampa() {
 		
 		if(temEstampa) 
 			return "A peça possui estampa"; 
@@ -54,15 +63,7 @@ public class Roupa {
 			return "A peça nao possui estampa";
 	}
 	
-	public void ListarRoupa (){
-		
-		DecimalFormat decimal = new DecimalFormat("0.##");
-		String lista = "--------------------------------------------- /n R$ " + decimal.format(preco);
-		lista += String.format("/n %s /n %s /n %s/n %s ", tamanho, cor, material, modelagem);
-		lista += PossuiEstampa() +"/n" + marca.GrifeImportada(); 
-		lista += "/n ---------------------------------------------";
-		System.out.println(lista);		
-	}
-
+	abstract void ListarRoupa ();
+	
 
 }
