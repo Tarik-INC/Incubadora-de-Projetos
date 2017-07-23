@@ -1,6 +1,6 @@
 package inventario;
 
-class Promocoes {
+class Promocao {
 	
 	private static int quantemDisconto;
 	double precoOriginal;
@@ -15,10 +15,10 @@ class Promocoes {
 	}
 
 	public static void setQuantdemDisconto(int quantemDisconto) {
-		Promocoes.quantemDisconto = quantemDisconto;
+		Promocao.quantemDisconto = quantemDisconto;
 	}
 
-	public Promocoes(Roupa peca, double disconto) {
+	public Promocao(Roupa peca, double disconto) {
 		precoOriginal = peca.preco; 
 		precoPromocional = aplicarPromocao(precoOriginal, disconto);
 	}
