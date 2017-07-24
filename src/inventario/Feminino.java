@@ -1,29 +1,3 @@
-package inventario;
-
-import java.text.DecimalFormat;
-
-public class Feminino extends Roupa {
-	
-	private static int quantFeminino;
-
-	public static int getQuantFeminino() {
-		return quantFeminino;
-	}
-
-	public static void setQuantFeminino(int quantFeminino) {
-		Feminino.quantFeminino = quantFeminino;
-	}
-
-
-	public Feminino(double p, String nomeMarca, String tam, String cor, 
-			String mat, String mod) {
-		super(p, nomeMarca, tam, cor, mat, mod);
-	}
-
-	public Feminino(double p, String nomeMarca, boolean importada, 
-			boolean grife,String tam, String cor, String mat, String mod) {
-		super(p, nomeMarca, importada, grife, tam, cor, mat, mod);
-	}
 
 
 	@Override
