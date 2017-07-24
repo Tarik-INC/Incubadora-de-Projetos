@@ -15,13 +15,16 @@ public class Feminino extends Roupa {
 	}
 
 
-	public Feminino(double p, String nomeMarca, String tam, String cor, String mat, String mod) {
+	public Feminino(double p, String nomeMarca, String tam, String cor, 
+			String mat, String mod) {
 		super(p, nomeMarca, tam, cor, mat, mod);
 	}
 
-	public Feminino(double p, String tam, String cor, String mat, String mod, boolean temEstampa) {
-		super(p, tam, cor, mat, mod, temEstampa);
+	public Feminino(double p, String nomeMarca, boolean importada, 
+			boolean grife,String tam, String cor, String mat, String mod) {
+		super(p, nomeMarca, importada, grife, tam, cor, mat, mod);
 	}
+
 
 	@Override
 	void ListarRoupa() {

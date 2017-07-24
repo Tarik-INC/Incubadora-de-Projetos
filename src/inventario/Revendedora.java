@@ -25,6 +25,7 @@ public class Revendedora {
 	public String getEndereço() {
 		return endereco;
 	}
+	List<Revendedora> teste = null;
 	public void setEndereço(String endereço) {
 		this.endereco = endereço;
 	}

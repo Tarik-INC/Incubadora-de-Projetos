@@ -1,8 +1,6 @@
 package inventario;
 
-import java.text.DecimalFormat;
-
-abstract class Roupa {
+public abstract class Roupa {
 	
 	private static int quantEstoque; // quantidade em estoque
 	private int nroId;
@@ -43,18 +41,21 @@ abstract class Roupa {
 		
 	}
 	
-	public Roupa(double p, String tam, String cor, String mat, String mod, 
-			boolean temEstampa) {
+	public Roupa(double p, String nomeMarca, boolean importada, boolean grife,
+			String tam, String cor, String mat, String mod) {
 		
 		preco = p;
 		tamanho = tam;
 		this.cor = cor;
 		material = mat;
 		modelagem = mod;
-		temEstampa = true;
+		temEstampa = false;
+		marca = new Marca(nomeMarca, importada, grife);
 		
 	}
 	
+	
+
 	public String PossuiEstampa() {
 		
 		if(temEstampa) 
