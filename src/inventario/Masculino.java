@@ -12,7 +12,7 @@ public class Masculino extends Roupa {
 		return quantMasculino;
 	}
 
-	public static void setQuantMasculino(int quantMasculino) {
+	public static void AsetQuantMasculino(int quantMasculino) {
 		Masculino.quantMasculino = quantMasculino;
 	}
 
